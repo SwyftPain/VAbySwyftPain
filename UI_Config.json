@@ -1,0 +1,25 @@
+{
+  "output_file": "settings.json",
+  "va_location": {
+    "type": "textbox",
+    "value": "C:\\Program Files\\VoiceAttack\\VoiceAttack.exe",
+    "label": "VoiceAttack Directory",
+    "tooltip": "Add where your VoiceAttack is installed.",
+    "group": "Location"
+  },
+  "prefix": {
+    "type": "textbox",
+    "value": "!Ava",
+    "label": "Command Prefix",
+    "tooltip": "Choose your command prefix.",
+    "group": "Commands"
+  },
+	"OpenReadMe": {
+		"type": "button",
+		"label": "Open README.txt",
+		"tooltip": "Opens the README.txt for this script",
+		"function": "OpenReadMe",
+		"wsevent": "",
+		"group": "Notes"
+	}
+}
