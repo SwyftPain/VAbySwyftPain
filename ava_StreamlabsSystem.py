@@ -25,7 +25,7 @@ def Init():
 
 def Execute(data):
 	if data.IsChatMessage() and data.GetParam(0).startswith(settings["prefix"]):
-		os.system('"' + settings["va_location"] + '" -command "' + data.Message[4:].strip() + '"')
+		os.system(settings["va_location"] +' -command "' + data.Message[len(settings["prefix"]):].strip() + '"')
 	return
 
 def OpenReadMe():
