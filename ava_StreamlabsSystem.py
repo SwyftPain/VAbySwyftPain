@@ -46,7 +46,7 @@ def ReloadSettings(jsonData):
 def Parse(parseString, userid, username, targetid, targetname, message):
     
     if "$va" in parseString:
-        pre = os.system('"' + settings["va_location"] + '"' + ' -command "' + message + '"' + ' -passedText ' + '"\\"' + username + '\\""')
+        pre = os.system('"' + settings["va_location"] + '"' + ' -PassedText ' + '"\\"' + username + '\\""' + ' -command "' + message + '"')
         if pre:
             # Send a success message for user or target if provided
             if targetname:
