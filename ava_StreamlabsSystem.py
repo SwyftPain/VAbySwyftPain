@@ -24,9 +24,7 @@ def Init():
     return
 
 def Execute(data):
-	if data.IsChatMessage() and data.GetParam(0).startswith(settings["prefix"]):
-		os.system(settings["va_location"] +' -command "' + data.Message[len(settings["prefix"]):].strip() + '"')
-	return
+	    return
 
 def OpenReadMe():
     os.startfile(os.path.join(os.path.dirname(__file__), "README.txt"))
@@ -41,3 +39,22 @@ def ReloadSettings(jsonData):
     # Execute json reloading here
     settings = json.loads(jsonData)
     return
+
+#---------------------------
+#   [Optional] Parse method (Allows you to create your own custom $parameters) 
+#---------------------------
+def Parse(parseString, userid, username, targetid, targetname, message):
+    
+    if "$va" in parseString:
+        pre = os.system(settings["va_location"] +' -command "' + message + '"' + ' -passedText ' + '"\\"' + username + '\\""')
+        if pre:
+            # Send a success message for user or target if provided
+            if targetname:
+                Parent.SendStreamMessage("")
+            else:
+                Parent.SendStreamMessage("")
+        else:
+            Parent.SendStreamMessage("")
+        return parseString.replace("$va","")
+    
+    return parseString
