@@ -1,5 +1,5 @@
 # VAbyAez
- Streamlabs Chatbot Scripts to launch VoiceAttack
+ Streamlabs Chatbot Script to launch VoiceAttack
 
  VoiceAttack has to be launched!
 
