@@ -7,3 +7,5 @@
 
  Releases
  [here](https://github.com/aezrath96/VAbyAez/releases)
+
+In case your location has a space in it, you have to add ^ before the space.
