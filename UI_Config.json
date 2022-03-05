@@ -9,9 +9,9 @@
   },
   "allowableCommands": {
     "type": "textbox",
-    "value": "Commands of VA you are allowing people to use",
+    "value": "Split commands using ';' delimiter.",
     "label": "Allowable Commands",
-    "tooltip": "Split commands using ';' delimiter.",
+    "tooltip": "Split commands using ';' delimiter. Remove text from this field to allow ALL commands.",
     "group": "Commands"
   },
 	"OpenReadMe": {
