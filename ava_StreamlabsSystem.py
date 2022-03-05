@@ -44,7 +44,7 @@ def ReloadSettings(jsonData):
 #   [Optional] Parse method (Allows you to create your own custom $parameters) 
 #---------------------------
 def Parse(parseString, userid, username, targetid, targetname, message):
-    allowableCommands = settings["allowableCommands"].Split(';')
+    allowableCommands = settings["allowableCommands"].split(';')
     if "$va" in parseString:
         if message in allowableCommands or (len(allowableCommands) == 1 and allowableCommands[0] == ''):
             pre = os.system('"' + settings["va_location"] + '"' + ' -PassedText ' + '"\\"' + username + '\\""' + ' -command "' + message + '"')
