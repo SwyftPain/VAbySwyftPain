@@ -44,17 +44,13 @@ def ReloadSettings(jsonData):
 #   [Optional] Parse method (Allows you to create your own custom $parameters) 
 #---------------------------
 def Parse(parseString, userid, username, targetid, targetname, message):
-    
+    allowableCommands = settings["allowableCommands"].Split(';')
     if "$va" in parseString:
-        pre = os.system('"' + settings["va_location"] + '"' + ' -PassedText ' + '"\\"' + username + '\\""' + ' -command "' + message + '"')
-        if pre:
-            # Send a success message for user or target if provided
-            if targetname:
-                Parent.SendStreamMessage("")
-            else:
-                Parent.SendStreamMessage("")
+        if message in allowableCommands:
+            pre = os.system('"' + settings["va_location"] + '"' + ' -PassedText ' + '"\\"' + username + '\\""' + ' -command "' + message + '"')
+            return parseString.replace("$va","")
         else:
             Parent.SendStreamMessage("")
-        return parseString.replace("$va","")
+            return parseString.replace("$va","")
     
     return parseString

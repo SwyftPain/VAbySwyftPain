@@ -7,6 +7,13 @@
     "tooltip": "Add where your VoiceAttack is installed.",
     "group": "Location"
   },
+  "allowableCommands": {
+    "type": "textbox",
+    "value": "Commands of VA you are allowing people to use",
+    "label": "Allowable Commands",
+    "tooltip": "Split commands using ';' delimiter.",
+    "group": "Commands"
+  },
 	"OpenReadMe": {
 		"type": "button",
 		"label": "Open README.txt",
